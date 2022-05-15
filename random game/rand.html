@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Game</title>
+</head>
+<style>
+  .body{
+    background-color: indigo;
+   }
+  .text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+  }
+  .container{
+    background-image: url(https://loantap.in/wp-content/uploads/photo-1553095066-5014bc7b7f2d.jpg);
+    background-size: cover;
+    border: whitesmoke;
+    border-width: 20px;
+    display: flexbox;
+    border-radius: 35px;
+    margin: 0px;
+    background-color: black;
+    color: rgb(193, 236, 0);
+    height: 700px;
+  }
+  .item{
+    display: flex;
+    flex-direction: column; 
+    justify-items: right;
+    text-align: center;
+  }
+  .mar{
+    margin: 30px;
+  }
+  .btn{
+    width:200px;
+    color: rgb(233, 6, 6);
+    background-color: cadetblue;
+    border-radius: 40px;
+    height: 50px;
+    font-size: larger;
+  }
+  .btn:hover{
+    border-width: 5px;
+    border-color: lightblue;
+    transform: scale(2,2);
+    transition: 3s;
+  }
+  #range,#num{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-family: fantasy;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="item mar">
+    <h1>TRY YOUR LUCK</h1>
+    <form action="">
+      <label for="range" class="text">CHOOSE YOUR RANGE:</label><br>
+      <select id="range" class="text mar" name="range" required="yes">
+        <option value=10>10</option>
+        <option value=50>50</option>
+        <option value=100>100</option>
+        <option value=200>200</option>
+      </select>
+      <div>
+      <label for="num" class="text">TRY YOU LUCKY NUMBER</label><br>
+      <input type="number" class="text mar" id="num" required="yes" value= num>
+      </div>
+      <div>
+        <label for="submit"></label>
+        <button class="btn mar" onclick=randomNumber()>submit</button>
+      </div>
+    </form>
+
+
+    <script>
+      let num= "";
+      let ranNum= "";
+      console.log(random_num);
+      let count=0;
+      function randomNumber(){
+          count++;
+          if(num==ranNum){
+            alert("You have completed the challange in " + count + " times");
+          }
+          else if(num>ranNum){
+            alert("You are bit higher than expected");
+          }
+          else if(num<ranNum){
+            alert("You are bit lower than expected");
+          }
+        }
+    </script>
+    </div>
+  </div>
+</body>
+</html>
